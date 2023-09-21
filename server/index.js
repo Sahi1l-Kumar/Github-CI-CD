@@ -16,7 +16,7 @@ app.use("/user", userRouter);
 // DONT MISUSE THIS THANKYOU!!
 
 
-app.get("/", (req, res) => {
+app.get("http://ec2-16-170-148-240.eu-north-1.compute.amazonaws.com:3000/", (req, res) => {
   console.log("Hi from Sahil");
   res.sendStatus(200);
 });
