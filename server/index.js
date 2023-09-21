@@ -14,15 +14,10 @@ app.use("/user", userRouter);
 
 // Connect to MongoDB
 // DONT MISUSE THIS THANKYOU!!
-mongoose.connect("mongodb+srv://Sahil:try@cluster0.1uvnksv.mongodb.net/", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  dbName: "courses",
-});
 
-app.get("/", (req, res) => {
-  console.log("Hi from Sahil");
-  res.sendStatus(200);
+
+app.get("http://ec2-16-170-148-240.eu-north-1.compute.amazonaws.com:3000/", (req, res) => {
+  res.status(200).json({message: "Hi"});
 });
 
 app.listen(3000, () => console.log("Server running on port 3000"));
