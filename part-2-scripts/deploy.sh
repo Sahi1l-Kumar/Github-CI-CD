@@ -7,7 +7,7 @@ export NVM_DIR="$HOME/.nvm"
 nvm use v20.7.0
 export PATH=$PATH:/home/ubuntu/.nvm/versions/node/v20.7.0/bin
 
-cd week-9
+cd Github-CI-CD
  git pull origin master
  cd server
  $pm2 kill
