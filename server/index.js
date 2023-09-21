@@ -15,9 +15,11 @@ app.use("/user", userRouter);
 // Connect to MongoDB
 // DONT MISUSE THIS THANKYOU!!
 
-
-app.get("http://ec2-16-170-148-240.eu-north-1.compute.amazonaws.com:3000/", (req, res) => {
-  res.status(200).json({message: "Hi"});
-});
+app.get(
+  "http://ec2-16-170-148-240.eu-north-1.compute.amazonaws.com:3000/me",
+  (req, res) => {
+    res.status(200).json({ message: "Hi" });
+  }
+);
 
 app.listen(3000, () => console.log("Server running on port 3000"));
