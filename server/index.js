@@ -17,8 +17,7 @@ app.use("/user", userRouter);
 
 
 app.get("http://ec2-16-170-148-240.eu-north-1.compute.amazonaws.com:3000/", (req, res) => {
-  console.log("Hi from Sahil");
-  res.sendStatus(200);
+  res.status(200).json({message: "Hi"});
 });
 
 app.listen(3000, () => console.log("Server running on port 3000"));
