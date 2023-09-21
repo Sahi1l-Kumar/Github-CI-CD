@@ -14,11 +14,7 @@ app.use("/user", userRouter);
 
 // Connect to MongoDB
 // DONT MISUSE THIS THANKYOU!!
-mongoose.connect("mongodb+srv://Sahil:try@cluster0.1uvnksv.mongodb.net/", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  dbName: "courses",
-});
+
 
 app.get("/", (req, res) => {
   console.log("Hi from Sahil");
